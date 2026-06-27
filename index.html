@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Almighty Gym — Forge Your Legacy</title>
+<meta name="description" content="Almighty Gym — Premium fitness club. Transform your body with world-class equipment, certified trainers, and 24/7 access. Book FREE trial today!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">ALMIGHTY</div>
+    <div style="font-size:2rem;">💪</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- WELCOME MODAL -->
+<div id="welcomeModal" class="welcome-modal">
+  <div class="welcome-modal__box">
+    <button id="welcomeModalClose" class="welcome-modal__close"><i class="fas fa-times"></i></button>
+    <div class="welcome-modal__header">
+      <div class="welcome-modal__logo">💪</div>
+      <div>
+        <h2>Welcome to <span style="color:var(--red)">Almighty</span> Gym</h2>
+        <p>Transform your body. Book your <strong>FREE trial</strong> today!</p>
+      </div>
+    </div>
+    <form id="welcomeForm">
+      <div class="form-group"><input id="wfName" type="text" placeholder="Your Name *" required></div>
+      <div class="form-group"><input id="wfPhone" type="tel" placeholder="Phone *" required></div>
+      <div class="form-group">
+        <select id="wfPlan">
+          <option value="">Interested Plan</option>
+          <option>Basic — ₹1500/month</option>
+          <option>Pro — ₹4350/quarterly (₹1450/mo)</option>
+          <option>Elite — ₹15,600/year (₹1300/mo)</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-dumbbell"></i> Book Free Trial</button>
+      <div id="wfSuccess" class="form-success"><i class="fas fa-check-circle"></i> Done! We'll call you within 24 hours.</div>
+    </form>
+    <div class="welcome-skip"><a href="#" id="welcomeSkip">No thanks, I'll explore first</a></div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo"><span class="logo-icon">💪</span><span>ALMIGHTY<span class="logo-accent"> GYM</span></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#pricing" class="nav-link">Pricing</a></li>
+      <li><a href="#reviews" class="nav-link">Reviews</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeToggle" class="theme-btn"><i id="themeIcon" class="fas fa-moon"></i></button>
+      <button id="hamburger" class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-video-wrap">
+    <!-- FIXED: autoplay muted loop playsinline for mobile -->
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1400&q=80">
+      <source src="https://cdn.pixabay.com/video/2025/01/23/254197_large.mp4" type="video/mp4">
+      <!-- Fallback image if video fails -->
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fas fa-bolt"></i> Premium Fitness Club</div>
+    <h1 class="hero-title">FORGE YOUR<br><span class="hero-accent">LEGACY</span></h1>
+    <p class="hero-sub">Where champions are born. Train hard. Go heavy. Leave everything on the floor.</p>
+    <div class="hero-cta">
+      <a href="#pricing" class="btn btn-primary"><i class="fas fa-dumbbell"></i> Join Now</a>
+      <a href="#about" class="btn btn-ghost">Discover More <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-n" data-target="500">0</span><span>+</span><small>Members</small></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><span class="stat-n" data-target="12">0</span><span>+</span><small>Trainers</small></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><span class="stat-n" data-target="100">0</span><span>+</span><small>Machines</small></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><span class="stat-n" data-target="8">0</span><span>+</span><small>Years</small></div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section about-sec">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-imgs reveal-left">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&q=80&auto=format&fit=crop" alt="Dark professional gym interior" loading="lazy">
+          <div class="about-badge-pill"><i class="fas fa-star" style="color:var(--gold)"></i> Premium Facility</div>
+        </div>
+        <div class="about-img-small">
+          <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&q=80&auto=format&fit=crop" alt="Bodybuilder training" loading="lazy">
+        </div>
+        <div class="about-img-small">
+          <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80&auto=format&fit=crop" alt="Elite strength zone" loading="lazy">
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <div class="sec-head" style="text-align:left;margin-bottom:28px">
+          <span class="sec-badge">About Us</span>
+          <h2 class="sec-title">We Are <span class="accent">Almighty</span></h2>
+        </div>
+        <p>Born from the passion for excellence, Almighty Gym is not just a fitness center — it is a sanctuary for those who refuse to be ordinary.</p>
+        <p>Whether you are a beginner or a seasoned athlete, our certified trainers and premium equipment are here to make your transformation real.</p>
+        <div class="features">
+          <div class="feat"><div class="feat-icon"><i class="fas fa-fire"></i></div><div><h4>High-Intensity Training</h4><p>Customized HIIT &amp; strength programs that push your limits.</p></div></div>
+          <div class="feat"><div class="feat-icon"><i class="fas fa-user-shield"></i></div><div><h4>Expert Trainers</h4><p>Certified coaches dedicated to your progress every step.</p></div></div>
+          <div class="feat"><div class="feat-icon"><i class="fas fa-clock"></i></div><div><h4>24/7 Access</h4><p>We never close on your goals. Train anytime.</p></div></div>
+        </div>
+        <a href="#pricing" id="aboutJoinBtn" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section gallery-sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-badge">Equipment</span>
+      <h2 class="sec-title">World-Class <span class="accent">Machines</span></h2>
+      <p>State-of-the-art gear for every muscle group. Every machine premium. Every session counts.</p>
+    </div>
+    <div class="gallery-tabs">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="weights">Weights</button>
+      <button class="tab" data-filter="cardio">Cardio</button>
+      <button class="tab" data-filter="strength">Strength</button>
+    </div>
+    <div class="gallery-grid">
+      <div class="gitem gitem-tall reveal" data-cat="weights">
+        <div class="gimg-wrap"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&q=80&auto=format&fit=crop" alt="Black dumbbells" loading="lazy"><div class="g-hover"><div><h4>Dumbbell Rack</h4><p>1kg–100kg Free Weights</p></div></div></div>
+      </div>
+      <div class="gitem reveal" data-cat="weights">
+        <div class="gimg-wrap"><img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&q=80&auto=format&fit=crop" alt="Barbell" loading="lazy"><div class="g-hover"><div><h4>Barbell Station</h4><p>Olympic Powerlifting</p></div></div></div>
+      </div>
+      <div class="gitem reveal" data-cat="strength">
+        <div class="gimg-wrap"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80&auto=format&fit=crop" alt="Elite Strength Zone" loading="lazy"><div class="g-hover"><div><h4>Elite Strength Zone</h4><p>Where legends are built</p></div></div></div>
+      </div>
+      <div class="gitem reveal" data-cat="cardio">
+        <div class="gimg-wrap"><img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=500&q=80&auto=format&fit=crop" alt="Cardio" loading="lazy"><div class="g-hover"><div><h4>Cardio Zone</h4><p>Treadmills · Bikes · Ellipticals</p></div></div></div>
+      </div>
+      <div class="gitem reveal" data-cat="strength">
+        <div class="gimg-wrap"><img src="https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?w=500&q=80&auto=format&fit=crop" alt="Functional Zone" loading="lazy"><div class="g-hover"><div><h4>Functional Zone</h4><p>Cables · Rigs · Suspension</p></div></div></div>
+      </div>
+      <div class="gitem reveal" data-cat="weights">
+        <div class="gimg-wrap"><img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=500&q=80&auto=format&fit=crop" alt="Kettlebell" loading="lazy"><div class="g-hover"><div><h4>Kettlebell Area</h4><p>Speed · Power · Conditioning</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINERS -->
+<section id="trainers" class="section trainers-sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-badge">Our Team</span>
+      <h2 class="sec-title">Meet The <span class="accent">Trainers</span></h2>
+      <p>Elite-certified coaches committed to your transformation.</p>
+    </div>
+    <div class="trainers-grid">
+      <div class="trainer-card reveal">
+        <div class="trainer-img"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&q=80&auto=format&fit=crop&crop=faces" alt="Arjun Sharma" loading="lazy"></div>
+        <div class="trainer-info">
+          <h3>Arjun Sharma</h3>
+          <span class="trainer-role">Head Coach — Strength &amp; Conditioning</span>
+          <p>12+ years elite bodybuilding. Former state powerlifter.</p>
+          <div class="trainer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="trainer-card reveal">
+        <div class="trainer-img"><img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&q=80&auto=format&fit=crop&crop=faces" alt="Priya Nair" loading="lazy"></div>
+        <div class="trainer-info">
+          <h3>Priya Nair</h3>
+          <span class="trainer-role">HIIT &amp; Functional Coach</span>
+          <p>Certified HIIT specialist. Fat loss and endurance expert.</p>
+          <div class="trainer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="trainer-card reveal">
+        <div class="trainer-img"><img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?w=400&q=80&auto=format&fit=crop&crop=faces" alt="Rohan Mehta" loading="lazy"></div>
+        <div class="trainer-info">
+          <h3>Rohan Mehta</h3>
+          <span class="trainer-role">Nutrition &amp; Physique Coach</span>
+          <p>IFBB-certified. Body recomposition and diet expert.</p>
+          <div class="trainer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section pricing-sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-badge">Membership</span>
+      <h2 class="sec-title">Simple <span class="accent">Pricing</span></h2>
+      <p>Transparent plans. No hidden charges. Trainer available on every plan.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="price-label">Monthly</div>
+        <h3>Basic</h3>
+        <div class="price-amount">₹1500<span>/month</span></div>
+        <p class="price-desc">Billed monthly</p>
+        <ul class="price-features">
+          <li><i class="fas fa-check"></i> Full Gym Access</li>
+          <li><i class="fas fa-check"></i> All Cardio Equipment</li>
+          <li><i class="fas fa-check"></i> Free Weights Area</li>
+          <li><i class="fas fa-check"></i> Locker Room</li>
+          <li><i class="fas fa-check"></i> Personal Trainer</li>
+          <li class="muted"><i class="fas fa-times"></i> Diet Plan</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost-red btn-full">Get Started</a>
+      </div>
+      <div class="price-card price-featured reveal">
+        <div class="price-badge-top">Best Value</div>
+        <div class="price-label">Quarterly</div>
+        <h3>Pro</h3>
+        <div class="price-amount">₹4350<span>/quarter</span></div>
+        <p class="price-desc">₹1450/mo · Save ₹150/mo</p>
+        <ul class="price-features">
+          <li><i class="fas fa-check"></i> Full Gym Access</li>
+          <li><i class="fas fa-check"></i> All Equipment</li>
+          <li><i class="fas fa-check"></i> Free Weights</li>
+          <li><i class="fas fa-check"></i> Locker Room</li>
+          <li><i class="fas fa-check"></i> Trainer (2×/week)</li>
+          <li><i class="fas fa-check"></i> Custom Diet Plan</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-full open-modal-btn">Join Now</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-label">Yearly</div>
+        <h3>Elite</h3>
+        <div class="price-amount">₹15,600<span>/year</span></div>
+        <p class="price-desc">₹1300/mo · Save ₹200/mo</p>
+        <ul class="price-features">
+          <li><i class="fas fa-check"></i> 24/7 Full Access</li>
+          <li><i class="fas fa-check"></i> All Equipment</li>
+          <li><i class="fas fa-check"></i> Priority Booking</li>
+          <li><i class="fas fa-check"></i> Daily Trainer</li>
+          <li><i class="fas fa-check"></i> Diet + Supplements</li>
+          <li><i class="fas fa-check"></i> Monthly Progress Tracking</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost-red btn-full">Get Elite</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="section reviews-sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-badge">Testimonials</span>
+      <h2 class="sec-title">What Members <span class="accent">Say</span></h2>
+      <p>Real transformations. Real people. Real results at Almighty Gym.</p>
+    </div>
+    <div class="reviews-carousel" id="reviewsCarousel">
+      <div class="reviews-track" id="reviewsTrack">
+        <div class="r-card reveal"><p>"Almighty Gym changed my life. The atmosphere is electrifying. Lost 15kg in 4 months!"</p><div class="r-author"><div class="r-avatar">RS</div><div><strong>Rahul Singh</strong><span>Member since 2023</span></div></div></div>
+        <div class="r-card reveal"><p>"Arjun sir helped me go from 60kg to 80kg clean bulk in 6 months. Best gym in the city!"</p><div class="r-author"><div class="r-avatar">AK</div><div><strong>Aarav Kumar</strong><span>Member since 2022</span></div></div></div>
+        <div class="r-card reveal"><p>"As a woman I always felt intimidated. Almighty Gym has an amazing inclusive vibe — 10/10!"</p><div class="r-author"><div class="r-avatar">NP</div><div><strong>Nisha Patel</strong><span>Member since 2024</span></div></div></div>
+        <div class="r-card reveal"><p>"Pro plan quarterly is amazing value. Physique transformed completely in 3 months!"</p><div class="r-author"><div class="r-avatar">VG</div><div><strong>Vikram Gupta</strong><span>Member since 2023</span></div></div></div>
+        <div class="r-card reveal"><p>"Been to gyms in 5 cities — Almighty has the best dark vibe and most professional staff!"</p><div class="r-author"><div class="r-avatar">SM</div><div><strong>Sneha Mishra</strong><span>Member since 2024</span></div></div></div>
+        <div class="r-card reveal"><p>"Elite yearly plan — ₹1300/month is insane value. Best investment I ever made for my health!"</p><div class="r-author"><div class="r-avatar">DV</div><div><strong>Dev Verma</strong><span>Member since 2025</span></div></div></div>
+      </div>
+      <div class="carousel-controls">
+        <button id="carouselPrev"><i class="fas fa-chevron-left"></i></button>
+        <div id="carouselDots" class="carousel-dots"></div>
+        <button id="carouselNext"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-badge">Contact</span>
+      <h2 class="sec-title">Get In <span class="accent">Touch</span></h2>
+      <p>Ready to start? Reach out — we guide you every step of the way.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <div class="ci"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Address</h4><p>123 Power Street, Fitness Nagar, Gurugram — 122505</p></div></div>
+        <div class="ci"><div class="ci-icon"><i class="fas fa-phone"></i></div><div><h4>Phone</h4><p><a href="tel:+919999999999">+91 99999 99999</a></p></div></div>
+        <div class="ci"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p><a href="mailto:info@almightygym.in">info@almightygym.in</a></p></div></div>
+        <div class="ci"><div class="ci-icon"><i class="fas fa-clock"></i></div><div><h4>Hours</h4><p>Mon–Sat: 5AM – 11PM · Sun: 6AM – 8PM</p></div></div>
+        <a href="https://wa.me/919999999999?text=Hi%20Almighty%20Gym%2C%20I%20want%20to%20join!" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+      <div class="contact-form reveal-right">
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group"><input id="fname" type="text" placeholder="Your Name" required></div>
+            <div class="form-group"><input id="fphone" type="tel" placeholder="Phone" required></div>
+          </div>
+          <div class="form-group"><input id="femail" type="email" placeholder="Email"></div>
+          <div class="form-group">
+            <select id="fplan">
+              <option value="">Select a plan</option>
+              <option>Basic — ₹1500/month</option>
+              <option>Pro — ₹4350/quarterly</option>
+              <option>Elite — ₹15,600/yearly</option>
+            </select>
+          </div>
+          <div class="form-group"><textarea id="fmsg" placeholder="Message" rows="4"></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <div id="formSuccess" class="form-success"><i class="fas fa-check-circle"></i> Sent! We'll contact you soon.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" style="margin-bottom:14px;display:inline-flex">💪 ALMIGHTY GYM</a>
+        <p>Forge your legacy every single day. The only gym that turns ordinary into almighty.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#">Weight Training</a></li>
+          <li><a href="#">Cardio &amp; HIIT</a></li>
+          <li><a href="#">Personal Training</a></li>
+          <li><a href="#">Nutrition Coaching</a></li>
+          <li><a href="#">Body Transformation</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Contact</h4>
+        <p>123 Power Street, Gurugram — 122505</p>
+        <p><a href="tel:+919999999999">+91 99999 99999</a></p>
+        <p><a href="mailto:info@almightygym.in">info@almightygym.in</a></p>
+        <p>Mon–Sun: 5AM – 11PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <p>© 2025 Almighty Gym. All rights reserved.</p>
+        <p>Powered &amp; Designed by <a href="https://dhruvdeveloper.me" target="_blank" style="color:var(--red)">Dhruv</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT BUTTON -->
+<button id="formFloat" class="form-float">
+  <i class="fas fa-dumbbell"></i>
+  <span>Join / Enquire</span>
+</button>
+<a href="https://wa.me/919999999999?text=Hi%20Almighty%20Gym%2C%20I%20want%20to%20join!" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i> Chat with us!</a>
+
+<!-- FLOAT MODAL -->
+<div id="formModal" class="welcome-modal">
+  <div class="welcome-modal__box">
+    <button id="fmodalClose" class="welcome-modal__close"><i class="fas fa-times"></i></button>
+    <div class="welcome-modal__header">
+      <div class="welcome-modal__logo">💪</div>
+      <div><h2>Join <span style="color:var(--red)">Almighty</span> Gym</h2><p>We'll reach you within 24 hours!</p></div>
+    </div>
+    <form id="modalContactForm">
+      <div class="form-group"><input id="mfname" type="text" placeholder="Name *" required></div>
+      <div class="form-group"><input id="mfphone" type="tel" placeholder="Phone *" required></div>
+      <div class="form-group"><input id="mfemail" type="email" placeholder="Email *" required></div>
+      <div class="form-group">
+        <select id="mfplan">
+          <option value="">Choose plan</option>
+          <option>Basic — ₹1500/month</option>
+          <option>Pro — ₹4350/quarterly</option>
+          <option>Elite — ₹15,600/yearly</option>
+        </select>
+      </div>
+      <div class="form-group"><input id="mfgoal" type="text" placeholder="Goal"></div>
+      <button type="submit" class="btn btn-primary btn-full">Send Enquiry</button>
+      <div id="modalFormSuccess" class="form-success"><i class="fas fa-check-circle"></i> Received! We'll call you soon.</div>
+    </form>
+    <div style="text-align:center;margin-top:12px"><a href="https://wa.me/919999999999?text=Hi%20I%20want%20to%20join%20Almighty%20Gym!" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp Us</a></div>
+  </div>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
